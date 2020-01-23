@@ -120,12 +120,15 @@ function removeCharacters(string, removeChars) {
     removeArr.push(removeChars[i]);
   }
   console.log(removeArr);
-  let newArr = removeArr.join();
-  console.log(newArr);
 
-  return console.log(string.replace(/a|e|i|o|u/g, ''));
+  let finalString = string;
+  for (let i = 0; i < removeArr.length - 1; i++) {
+    finalString = finalString.replace(new RegExp(removeChars[i], 'g'), '');
+    console.log(finalString);
+  }
+  return finalString;
 }
-// console.log(removeCharacters('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
+console.log(removeCharacters('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
 
 // 10. Products
 
@@ -198,5 +201,5 @@ function rotateStrings(string, rotated) {
   console.log(rotated.repeat(2))
   return string.length === rotated.length && rotated.repeat(2).includes(string);
 }
-console.log(rotateStrings('amazon', 'azonma'));
-console.log(rotateStrings('amazon', 'azonam'));
+// console.log(rotateStrings('amazon', 'azonma'));
+// console.log(rotateStrings('amazon', 'azonam'));
