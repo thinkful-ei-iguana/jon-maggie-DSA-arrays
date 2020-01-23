@@ -130,5 +130,27 @@ function removeCharacters(string, removeChars) {
 // 10. Products
 
 function products(arr) {
-
+  let productTotal = 1;
+  arr.forEach(num => {
+    productTotal *= num;
+    console.log('prod', productTotal);
+  });
+  let productArr = [];
+  arr.forEach(number => {
+    let divided = product / number;
+    console.log('div1', divided);
+    productArr.push(divided);
+  });
+  console.log(productArr);
 }
+// console.log(products([1, 3, 9, 4]));
+
+// 10. Products second solution
+
+let arr = [1, 3, 9, 4];
+function products(arr) {
+  let solution = arr.reduce((a, b) => a * b);
+  const notherArr = arr.map(b => solution / b);
+  return notherArr;
+}
+// console.log(products(arr));
