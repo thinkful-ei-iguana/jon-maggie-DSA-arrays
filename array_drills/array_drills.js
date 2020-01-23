@@ -20,11 +20,11 @@ function main() {
   arr.pop();
 
 
-  arr.remove();
-  arr.remove();
-  arr.remove();
+  // arr.remove();
+  // arr.remove();
+  // arr.remove();
 
-  arr.push('tauhida');
+  // arr.push('tauhida');
   console.log(arr.get(0));
 }
 
@@ -53,7 +53,13 @@ main();
 /////////////////////////////////////
 
 // PRINT, EMPTY, RESIZE:
-// Print first item in the array: 3
-// Empty the array and add just 1 item: arr.push("tauhida"); Print this 1 item that you just added. 
+// -Print first item in the array: 3
+// -Empty the array and add just 1 item: arr.push("tauhida"); Print this 1 item that you just added. 
 // What is the result? Can you explain your result?:
-// Result is NaN
+// Result is NaN; the Memory class is set up to only accept numbers (line 3 of the 
+// Memory class in the Memory module)
+// -_resize() is used to allow enlargening of an array (which also generally involves
+// moving the actual array to a spot that has enough free space for the newly sized
+// capacity); it is a private function, only able to be used by the Array class
+
+///////////////////////////////////////
