@@ -154,3 +154,49 @@ function products(arr) {
   return notherArr;
 }
 // console.log(products(arr));
+
+//11. 2D Array
+
+function zeroZap(arr) {
+  let arrr = [
+    [1, 0, 1, 1, 0],
+    [0, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1],
+    [1, 0, 1, 1, 1],
+    [1, 1, 1, 1, 1]
+  ];
+  let newArr = arrr;
+  for (let i = 0; i < arrr.length; i++) {
+
+    for (let j = 0; j < arrr[i].length; j++) {
+
+      if (arrr[i][j] === 0) {
+        newArr[i].fill(0, 0);
+        // newArr[i++ +].splice(j, 0, 0);
+        // newArr[i + 2].splice(j, 0);
+        // newArr[i + 3].splice(j, 0);
+
+      }
+    }
+  }
+  console.log('here', newArr);
+
+}
+
+let input = [
+  [1, 0, 1, 1, 0],
+  [0, 1, 1, 1, 0],
+  [1, 1, 1, 1, 1],
+  [1, 0, 1, 1, 1],
+  [1, 1, 1, 1, 1]
+];
+// console.log(zeroZap(input))
+
+// 12. String Rotation
+
+function rotateStrings(string, rotated) {
+  console.log(rotated.repeat(2))
+  return string.length === rotated.length && rotated.repeat(2).includes(string);
+}
+console.log(rotateStrings('amazon', 'azonma'));
+console.log(rotateStrings('amazon', 'azonam'));
