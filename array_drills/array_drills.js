@@ -110,4 +110,25 @@ function smooshArrays(arr1, arr2) {
   let masterArray = arr1.concat(arr2);
   return masterArray.sort((a, b) => { return a - b; });
 }
-console.log(smooshArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
+// console.log(smooshArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
+
+// 9. Remove Characters
+
+function removeCharacters(string, removeChars) {
+  let removeArr = [];
+  for (let i = 0; i < removeChars.length; i++) {
+    removeArr.push(removeChars[i]);
+  }
+  console.log(removeArr);
+  let newArr = removeArr.join();
+  console.log(newArr);
+
+  return console.log(string.replace(/a|e|i|o|u/g, ''));
+}
+// console.log(removeCharacters('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
+
+// 10. Products
+
+function products(arr) {
+
+}
