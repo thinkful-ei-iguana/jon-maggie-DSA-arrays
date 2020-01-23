@@ -20,17 +20,17 @@ function main() {
   arr.pop();
 
 
-  // arr.remove();
-  // arr.remove();
-  // arr.remove();
+  arr.remove();
+  arr.remove();
+  arr.remove();
 
-  // arr.push('tauhida');
+  arr.push('tauhida');
   console.log(arr.get(0));
 }
 
-main();
+// main();
 
-// PUSH:
+// 2. PUSH:
 // What is the length, capacity and memory address of your array with arr.push(3)?:
 // {length: 1, _capacity: 3, ptr: 0}
 
@@ -43,7 +43,7 @@ main();
 
 ////////////////////////////////////
 
-// POP:
+// 3. POP:
 // What is the length, capacity, and address of your array? Explain the result of your program 
 // after adding the new lines of code:
 // {length: 3, _capacity: 12, ptr: 0}
@@ -52,7 +52,7 @@ main();
 
 /////////////////////////////////////
 
-// PRINT, EMPTY, RESIZE:
+// 4. PRINT, EMPTY, RESIZE:
 // -Print first item in the array: 3
 // -Empty the array and add just 1 item: arr.push("tauhida"); Print this 1 item that you just added. 
 // What is the result? Can you explain your result?:
@@ -63,3 +63,51 @@ main();
 // capacity); it is a private function, only able to be used by the Array class
 
 ///////////////////////////////////////
+
+// 5. URLify a String
+
+function urlify(string) {
+  console.log(encodeURI(string));
+
+}
+// urlify('tauhida parveen');
+// urlify('www.thinkful.com /tauh ida parv een');
+
+// 6. Filtering an Array
+
+function removeIfLessThanFive(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 5) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+
+// console.log(removeIfLessThanFive([1, 2, 4, 6, 8, 9, 55]));
+
+// 7. Max sum in the Array (kadane's algorithm)
+
+function maxArray(arr) {
+  let currentSum = 0;
+  let maxSum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    let currentNum = arr[i];
+
+    currentSum = Math.max((currentSum + currentNum), 0);
+    maxSum = Math.max(currentSum, maxSum);
+  }
+  return maxSum;
+}
+
+// console.log(maxArray([4, 6, -3, 5, -2, 1]));
+
+// 8. Merge Arrays
+
+function smooshArrays(arr1, arr2) {
+  let masterArray = arr1.concat(arr2);
+  return masterArray.sort((a, b) => { return a - b; });
+}
+console.log(smooshArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
